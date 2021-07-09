@@ -4,7 +4,10 @@ Easy Bazaar is an e-commerce website which can be accessible by both user as wel
 In this website, you can see products using filters like Men's Fashion, Women's Fashion and Accessories.
 You have to register first in account section and then you can explore products according to your needs.
 As a dealer, you can add products in your store and see your sales.
+
 # Screenshots
+-
+![Homepage](./Screenshots/ss1.png)
 
 # Features
 #### Frontend
@@ -22,6 +25,8 @@ As a dealer, you can add products in your store and see your sales.
 - <img alt="Visual Studio Code" src="https://img.shields.io/badge/VisualStudioCode-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 
 # Local Setup
+- git clone <url>
+- npm init
 - Since this is only the frontend of our website so just open the frontpage.html file which is the homepage.
 - Right click on the file.
 - Click on the option "Open with Browser".
