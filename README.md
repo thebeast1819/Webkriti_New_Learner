@@ -6,8 +6,9 @@ You have to register first in account section and then you can explore products 
 As a dealer, you can add products in your store and see your sales.
 
 # Screenshots
--
+- Home Page for User
 ![Homepage](./Screenshots/ss1.png)
+![Homepage](./Screenshots/ss2.png)
 
 # Features
 #### Frontend
