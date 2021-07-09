@@ -9,7 +9,21 @@ As a dealer, you can add products in your store and see your sales.
 - Home Page for User
 ![Homepage](./Screenshots/ss1.png)
 ![Homepage](./Screenshots/ss2.png)
-
+![Homepage](./Screenshots/ss3.png)
+- Products Collection Page
+![Homepage](./Screenshots/ss9.png)
+- Individual Product's Page
+![Homepage](./Screenshots/ss7.png)
+- Account's Type
+![Homepage](./Screenshots/ss10.png)
+- Sigin as a User
+![Homepage](./Screenshots/ss11.png)
+- Signup as a User
+![Homepage](./Screenshots/ss12.png)
+- Home Page of Seller Portal
+![Homepage](./Screenshots/ss13.png)
+- Add Products Page for a seller
+![Homepage](./Screenshots/ss15.png)
 # Features
 #### Frontend
 - This website has a creative look in which proper hovering effect is applied.
@@ -34,5 +48,5 @@ As a dealer, you can add products in your store and see your sales.
 - Now you can render all the pages of the website.
 
 # Team Members
-- Aman Vaishya 2020-IMG-008
-- Pragya Rathore 2020-IMG-049
+- Aman Vaishya 2020-IMG-008 <a href="https://github.com/thebeast1819" target="_blank">GitHub Link</a>
+- Pragya Rathore 2020-IMG-049 <a href="https://github.com/pika918" target="_blank">GitHub Link</a>
