@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_Register</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="user_register.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul class="list-of-nav-items">
+      <li class="items">
+        <a href="frontpage.html">
+          <img src="icon.png" width= 40%>
+        </a>
+      </li>
+      <li class="items">
+        <a href="frontpage.html" >Home</a>
+      </li>
+      <li class="items">
+        <a id="Products-List" >Products <i class="fa fa-shopping-bag fa-spin"></i></a>
+        <div id="product-dropdown" class="dropdown-content">
+          <a href="men.html">Men's Fashion</a>
+          <a href="women.html">Women's Fashion</a>
+          <a href="accessories.html">Accesories</a>
+        </div>
+      </li>
+      <li class="items">
+        <a href="offer.html">Offers <i class="fa fa-tag fa-lg"></i></a>
+      </li>
+      <li class="items">
+        <a href="account.html" class="active">Account <i class="fa fa-user"></i></a>
+      </li>
+    </ul>
+  </div>
+    <div class="container" id="container">
+        <div class="signup form-container">
+            <form action="http://localhost:3000/signup" method="POST" autocomplete="on">
+                <h1>Create Account</h1>
+                <input type="text" name="name" placeholder="Name" required id="name">
+                <input type="text" name="address" placeholder="Address" required id="address">
+                <input type="email" name="email" placeholder="Email Address" autocomplete="off" required id="email">
+                <input type="password" name="password" placeholder="Password" required id="password">
+                <input type="tel" name="contact" placeholder="Contact No." required id="contact">
+                <input type="text" name="dob" onfocus="(this.type='date')" placeholder="Date of Birth" required id="dob">
+                <button type="submit" class="login" style="margin-top:10px" onclick={onSubmit()}> Create Account</button>
+                <h5 class="login">Already have an account! <a id="signIn">Sign In</a></h5>
+            </form>
+        </div>
+        <div class="signin form-container">
+            <form action="#" autocomplete="off">
+                <h1 > Sign In</h1>
+                <input type="email" name="email" placeholder="Email" id="signinemail">
+                <input type="password" name="password" placeholder="Password" id="signinpassword">
+                <a href="#" class="login"> Forgot Your Password?</a>
+                <button class="login" > Let Me In...</button>
+                <h5 class="login">New to here! <a id="signUp">Sign Up</a></h5>
+            </form>            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="BG2.jpg" alt="CART" height="580" width="700"/>
+                    
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="BG2.jpg" alt="CART" height="580" width="700"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+        const name=document.getElementById('name');
+        const address=document.getElementById('address');
+        const email=document.getElementById('email');
+        const password=document.getElementById('password');
+        const dob=document.getElementById('dob')
+        function onSubmit()
+        {
+            const url= 'http://localhost:3000/signup';
+            fetch(url,{
+                method:'POST',
+                    headers: 
+                    {
+                      'Accept': 'application/json',
+                      'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify({
+                  name: name.value,
+                  address: address.value,
+                  email: email.value,
+                  password: password.value,
+                  dob: dob.value
+                })
+            })
+            .then(res=>res.json)
+            .then(json=>console.log(json))
+            .catch(err=>console.log(err));
+        }
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+
+       document.getElementById("Products-List").onclick = function() {Dropdown()};
+      function Dropdown() 
+      {
+        document.getElementById("product-dropdown").classList.toggle("show");
+      }
+    </script>
+</body>
+</html>

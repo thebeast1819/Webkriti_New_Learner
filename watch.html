@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="watch.css">
+</head>
+<body>
+  <div class="navbar">
+    <ul class="list-of-nav-items">
+      <li class="items">
+        <a href="frontpage.html">
+          <img src="icon.png" width= 40%>
+        </a>
+      </li>
+      <li class="items">
+        <a href="frontpage.html" >Home</a>
+      </li>
+      <li class="items">
+        <a id="Products-List" class="active">Products <i class="fa fa-shopping-bag fa-spin"></i></a>
+        <div id="product-dropdown" class="dropdown-content">
+          <a href="men.html">Men's Fashion</a>
+          <a href="women.html">Women's Fashion</a>
+          <a href="accessories.html">Accesories</a>
+        </div>
+      </li>
+      <li class="items">
+        <a href="offer.html">Offers <i class="fa fa-tag fa-lg"></i></a>
+      </li>
+      <li class="items">
+        <a href="account.html">Account <i class="fa fa-user"></i></a>
+      </li>
+    </ul>
+  </div>
+    <div class="mtrouser">
+        <div class="specifications">
+            <img src="watch2.jpeg" width=80% id="MainImg">
+            <div class="small">
+                <div class="small-image">
+                    <img src="watch1.jpeg" width=50% class="SmallImg">
+                    <img src="watch2.jpeg" width=50% class="SmallImg">
+                </div>
+            </div>
+        </div>
+        <div class="specifications">
+            <p>Home / Watch</p>
+            <h1>Stylish Green Watch</h1>
+            <h4>$10.20</h4>
+            <div>Quantity
+              <input type="number" value="1">
+            </div>
+            <a href="">Add to Cart</a>
+            <h3>Product Details</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione repellendus laudantium iusto similique dignissimos suscipit sunt ex. Quasi voluptas neque rerum, repellat repellendus recusandae consequatur ex hic? Ipsam, rerum deleniti!</p>
+        </div>
+    </div>
+    <div class="products">
+        <h2 class="product-title">Similar Products</h2>
+        <a class="viewmore" href="Products.html">View More--></a>
+        <ul class="product-list">
+          <li class="prod-1">
+            <a href="mshirt1.html">
+              <img src="mshirt1.png" width=70%>
+              <p>Men's Shirt</p>
+              <p>$8.00</p>
+            </a>
+          </li>
+          <li class="prod-2">
+            <a href="wplazo.html">
+              <img src="wplazo1.png" width=60%>
+              <p>Women's Plazo</p>
+              <p>$10.20</p>
+            </a>
+          </li>
+          <li class="prod-3">
+            <a href="mtrouser.html">
+              <img src="mtrouser1.png"width=70%>
+              <p>Men's Trouser</p>
+              <p>$9.50</p>
+            </a>
+          </li>
+          <li class="prod-4">
+            <a href="mshoe.html">
+              <img src="shoe1.png"width=110%>
+              <p>Men's Shoe</p>
+              <p>$10.00</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        var mainimg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("SmallImg");
+        smallimg[0].onclick = function(){ mainimg.src = smallimg[0].src;}
+        smallimg[1].onclick = function(){ mainimg.src = smallimg[1].src;}
+        smallimg[2].onclick = function(){ mainimg.src = smallimg[2].src;}
+
+       document.getElementById("Products-List").onclick = function() {Dropdown()};
+      function Dropdown() 
+      {
+        document.getElementById("product-dropdown").classList.toggle("show");
+      }
+      </script>
+</body>
+</html>

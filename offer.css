@@ -1,0 +1,122 @@
+*
+{
+    margin: 0%;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: Montserrat, sans-serif;
+    background: radial-gradient(white,#98DDD7);
+}
+/* Navigation Bar */
+.navbar
+{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+}
+.list-of-nav-items
+{
+    display: flex;
+    background: repeating-linear-gradient(white,#98DDD7);
+    box-shadow: 0px 0px 20px #84898b;
+    padding: 1rem 0;
+    border-radius: 0.2rem;
+    align-items: center;
+}
+.items
+{
+    list-style: none;
+    margin-right: 2rem;
+}
+.items a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 110%;
+    transition: all 350ms ease-in;
+}
+.items a:hover
+{
+    color: rgb(5, 47, 126);
+}
+.items a.active
+{
+    color: #9d0303;
+}
+.items:first-child
+{
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: 2 rem;
+}
+#Product-List
+{
+    position: relative;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem;
+    box-shadow: 10px 10px 50px #84898b;
+}
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+}
+.show
+{
+    display: block;
+}
+
+/* For listing of offers */
+.offer
+{
+    margin-top: 6%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: radial-gradient(white,#98DDD7);
+    box-shadow: 10px 10px 50px #84898b;
+    padding: 2rem;
+}
+.offer-list
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.offer-list li
+{
+    list-style: none;
+    background-color: #e8f7d6;
+    box-shadow: 5px 5px 18px #84898b;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1.5rem;
+    flex-basis: 25%;
+    justify-content: space-between;
+}
+.offer-list li:hover
+{
+    background-color: rgb(133, 136, 131);
+}
+.offer-list h3
+{
+    color: black;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: all 400ms ease-in;
+}
+.offer-list h3:hover
+{
+    color: white;
+}
+.offer-title
+{
+    text-align: center;
+    color: black;
+}

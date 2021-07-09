@@ -1,0 +1,41 @@
+{
+  "name": "easybazaar",
+  "version": "1.0.0",
+  "description": "For Webkriti",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebeast1819/NEW_LEARNERS.git"
+  },
+  "author": "Aman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebeast1819/NEW_LEARNERS/issues"
+  },
+  "homepage": "https://github.com/thebeast1819/NEW_LEARNERS#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "make-runnable": "^1.3.10",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

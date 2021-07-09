@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy_Bazaar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="frontpage.css">
+</head>
+<body>
+  <!-- For Navigation Bar -->
+    <div class="navbar">
+      <ul class="list-of-nav-items">
+        <li class="items">
+          <a href="frontpage.html">
+            <img src="icon.png" width= 40%>
+          </a>
+        </li>
+        <li class="items">
+          <a href="frontpage.html" class="active">Home</a>
+        </li>
+        <li class="items">
+          <a id="Products-List" >Products <i class="fa fa-shopping-bag fa-spin"></i></a>
+          <div id="product-dropdown" class="dropdown-content">
+            <a href="men.html">Men's Fashion</a>
+          <a href="women.html">Women's Fashion</a>
+          <a href="accessories.html">Accesories</a>
+          </div>
+        </li>
+        <li class="items">
+          <a href="offer.html">Offers <i class="fa fa-tag fa-lg"></i></a>
+        </li>
+        <li class="items">
+          <a href="account.html">Account <i class="fa fa-user"></i></a>
+        </li>
+      </ul>
+  </div>
+  <!-- For middle part ,i.e., Explore Now  -->
+  <div class="home">
+    <div class="explore"><img src="hip-removebg-preview.png"></div>
+    <div class="explore">
+      <h1>Don't stop yourself</h1>
+      <h1>from living the life in your own way</h1>
+      <p>
+        If you are going to do something, do it with style.
+      </p>
+      <a class="click" id="explore_now" onclick="explore_now(document.getElementById('category'))">Explore Now</a>       
+    </div> 
+  </div>
+  <!-- Categories--Men fashion/Women fashion/Accessories -->
+  <div class="categories" id="category">
+    <ul class="category-list">
+      <li class="men">
+        <a href="men.html">
+          <img src="boy_image.png" width=90%>
+          <h3>Men's Fashion</h3>
+        </a>
+      </li>
+      <li class="women">
+        <a href="women.html">
+          <img src="girl_image.png" width=90%>
+          <h3>Women's Fashion</h3>
+        </a>
+      </li>
+      <li class="accesories">
+        <a href="accessories.html">
+          <img src="watch2.png"width=90%>
+          <h3>Accesories</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- For listing of Latest Products -->
+  <div class="products">
+    <h2 class="product-title">Latest Products</h2>
+    <a class="viewmore" href="Products.html">View More--></a>
+    <ul class="product-list">
+      <li class="prod-1">
+        <a href="mshirt1.html">
+          <img src="mshirt1.png" width=70%>
+          <p>Men's Shirt</p>
+          <p>$8.00</p>
+        </a>
+      </li>
+      <li class="prod-2">
+        <a href="wplazo.html">
+          <img src="wplazo1.png" width=60%>
+          <p>Women's Plazo</p>
+          <p>$10.20</p>
+        </a>
+      </li>
+      <li class="prod-3">
+        <a href="mtrouser.html">
+          <img src="mtrouser1.png"width=70%>
+          <p>Men's Trouser</p>
+          <p>$9.50</p>
+        </a>
+      </li>
+      <li class="prod-4">
+        <a href="mshoe.html">
+          <img src="shoe1.png"width=100%>
+          <p>Men's Shoe</p>
+          <p>$10.00</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- For Footer -->
+  <footer>
+     <div class="sm-handle">
+             <a href="#" class="sm-button">
+              <i class="fa fa-instagram" ></i>
+             </a>
+             <a href="#" class="sm-button">
+              <i class="fa fa-linkedin">	</i>
+             </a>
+             <a href="#" class="sm-button">
+              <i class="fa fa-facebook-f">	</i>
+             </a>
+             <a href="#" class="sm-button">
+              <i class="fa fa-twitter">	</i>
+             </a>
+             <a href="#" class="sm-button">
+              <i class="fa fa-github">	</i>
+             </a>
+     </div>
+     <div class="footer-links">
+       <div class="menu">
+         <h4 class="menu-title">Menu</h4>
+         <a href="#" class="menu-links">About Us</a>
+         <a href="#" class="menu-links">Join Us</a>
+       </div>
+       <div class="menu">
+         <h4 class="menu-title">Other Pages</h4>
+         <a href="#" class="other-links">Contact Us</a>
+         <a href="#" class="other-links">Privacy Policy</a>
+         <a href="#" class="other-links">FAQ</a>
+         <a href="#" class="other-links">Terms of use</a>
+       </div>
+    </div>
+       <p class="copyright">&copy Copyright 2021 | Reserved by <a href="frontpage.html">Easy_Bazaar</a></p>
+</footer>
+    <script>
+      /* For Dropdown Part used in Product menu */
+      document.getElementById("Products-List").onclick = function() {Dropdown()};
+      function Dropdown() 
+      {
+        document.getElementById("product-dropdown").classList.toggle("show");
+      }
+      /* For scrolling down on clicking Explore Now button */
+      window.explore_now = function(target) 
+      {
+        var scrollContainer = target;
+        do { 
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do { 
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        scroll = function(c, a, b, i) {
+            i++; if (i > 30) return;
+            c.scrollTop = a + (b - a) / 30 * i;
+            setTimeout(function(){ scroll(c, a, b, i); }, 35);
+        }
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+      }
+    </script>
+</body>
+</html>
